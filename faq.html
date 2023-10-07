@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Luminaries of Islam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --teal: #0A6E6E; --gold: #C9A84C; --cream: #FDF6EC; --charcoal: #2C2C2C; --charcoal-light: #4A4A4A; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--charcoal); line-height: 1.8; }
+        .bismillah { text-align: center; padding: 14px; background: linear-gradient(135deg, #0F2440, #064D4D); color: var(--gold); font-family: 'Amiri', serif; font-size: 1.2rem; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--teal); margin-bottom: 8px; }
+        .subtitle { color: var(--charcoal-light); margin-bottom: 40px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-weight: 600; margin-bottom: 24px; }
+        .back-link:hover { text-decoration: underline; }
+        .faq-item { background: white; border-radius: 14px; padding: 20px 24px; margin-bottom: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); border: 1px solid rgba(201,168,76,0.1); cursor: pointer; transition: 0.3s; }
+        .faq-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+        .faq-q { font-weight: 600; color: var(--teal); font-size: 1.02rem; display: flex; align-items: center; justify-content: space-between; }
+        .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--gold); transition: 0.3s; }
+        .faq-item.open .faq-q::after { content: '−'; }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; color: var(--charcoal-light); font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding-top: 12px; }
+        .footer { text-align: center; padding: 24px; color: var(--charcoal-light); font-size: 0.85rem; margin-top: 40px; }
+        .footer a { color: var(--teal); }
+    </style>
+</head>
+<body>
+    <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to App</a>
+        <h1>Frequently Asked Questions</h1>
+        <p class="subtitle">Common questions about Luminaries of Islam</p>
+
+        <div class="faq-item"><div class="faq-q">What is the Islamic Golden Age?</div><div class="faq-a">The Islamic Golden Age (roughly 8th–14th century CE) was a period of extraordinary cultural, economic, and scientific flourishing in the Islamic world. Scholars made groundbreaking advances in mathematics, medicine, astronomy, chemistry, engineering, and many other fields. Many of these contributions laid the groundwork for modern science.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Why are these scientists important?</div><div class="faq-a">These scholars made discoveries and inventions that shaped the modern world. From algebra and algorithms to optics, surgery, and the scientific method — their work is the foundation of much of what we use and know today. Learning about them connects us to a rich history of human curiosity and achievement.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Can I use this app offline?</div><div class="faq-a">Almost entirely! The app runs locally in your browser. The only external dependency is Google Fonts for typography. If you're offline, the app will work but may use fallback fonts. No data is ever sent to any server.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Does the app record my voice?</div><div class="faq-a">Absolutely not. The Speech-to-Text feature uses your browser's built-in recognition engine. No voice data is stored, recorded, or sent anywhere. Your privacy is fully protected.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Why is the microphone button not showing?</div><div class="faq-a">Voice recognition (Speech-to-Text) requires browser support. It works best in Google Chrome and Microsoft Edge. If your browser doesn't support it, the microphone button is automatically hidden, but all other features work perfectly via clicking and typing.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Can the app read to me?</div><div class="faq-a">Yes! Look for the 🔊 speaker icon throughout the app. Click it to have the app read scientist bios, fun facts, quiz questions, and more. You can control the speed with the control bar that appears at the bottom of the screen.</div></div>
+
+        <div class="faq-item"><div class="faq-q">What can I say with voice search?</div><div class="faq-a">You can say any scientist's name (e.g., "Al-Khwarizmi", "Ibn Sina", "Al-Jazari") and the app will search for them. In the quiz, you can say an answer option out loud to select it.</div></div>
+
+        <div class="faq-item"><div class="faq-q">How do I change the reading speed?</div><div class="faq-a">When TTS is playing, a control bar appears at the bottom. Use the speed buttons: 🐢 Slow, 🚶 Normal, or 🐇 Fast. Your preference is saved for next time.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Why Bismillah at the top?</div><div class="faq-a">"Bismillah" (In the Name of God, the Most Gracious, the Most Merciful) is a traditional Islamic invocation said before undertaking any important task, including the pursuit of knowledge. It reflects the app's respect for Islamic values and the scholars' own faith-driven pursuit of understanding.</div></div>
+
+        <div class="faq-item"><div class="faq-q">Is this app free?</div><div class="faq-a">Yes, completely free. It's an educational resource designed to share the inspiring stories of Islamic Golden Age scientists with learners of all ages.</div></div>
+
+        <div class="faq-item"><div class="faq-q">How do I add more scientists?</div><div class="faq-a">If you're a developer, you can add scientists by editing the `scientists` array in `js/app.js`. Follow the same data structure as existing entries. Don't forget to add corresponding quiz questions too!</div></div>
+
+        <div class="faq-item"><div class="faq-q">Does it read in Arabic?</div><div class="faq-a">Currently, the TTS reads in English. Arabic text-to-speech is a stretch goal for a future version. Arabic names of scientists are displayed in the app for reference.</div></div>
+
+        <div class="footer">
+            <p>Luminaries of Islam v1.3 — <a href="index.html">Back to App</a> | <a href="help.html">Help</a> | <a href="README.html">README</a></p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

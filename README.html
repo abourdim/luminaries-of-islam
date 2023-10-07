@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README — Luminaries of Islam v1.3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root{--teal:#0A6E6E;--teal-dark:#064D4D;--gold:#C9A84C;--gold-dark:#A88A33;--cream:#FDF6EC;--parchment:#F8F0E0;--charcoal:#2C2C2C;--charcoal-light:#4A4A4A;--blue-night:#0F2440;--green:#3A7D44;--red:#B85450;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.8;font-size:16px;}
+        .bismillah{text-align:center;padding:16px;background:linear-gradient(135deg,var(--blue-night),var(--teal-dark));color:var(--gold);font-family:'Noto Naskh Arabic','Amiri',serif;font-size:1.3rem;letter-spacing:2px;text-shadow:0 1px 6px rgba(201,168,76,0.3);}
+        .top-bar{background:rgba(253,246,236,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,0.2);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+        .top-bar a{color:var(--teal);text-decoration:none;font-weight:600;font-size:0.92rem;padding:6px 14px;border-radius:8px;transition:0.3s;}
+        .top-bar a:hover{background:rgba(10,110,110,0.06);}
+        .top-bar .brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--teal-dark);font-weight:700;}
+        .container{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+        h1{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--teal-dark);margin:8px 0 4px;}
+        h1 .ar-title{display:block;font-family:'Noto Naskh Arabic',serif;font-size:1.3rem;color:var(--gold-dark);direction:rtl;margin-bottom:8px;}
+        .version-badge{display:inline-block;background:var(--teal);color:#fff;font-size:0.78rem;font-weight:700;padding:3px 12px;border-radius:50px;vertical-align:middle;margin-left:8px;}
+        .subtitle{color:var(--charcoal-light);font-size:1.05rem;margin-bottom:6px;}
+        .badges{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 32px;}
+        .badge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:0.78rem;font-weight:600;letter-spacing:0.3px;}
+        .badge-teal{background:rgba(10,110,110,0.1);color:var(--teal);}
+        .badge-gold{background:rgba(201,168,76,0.15);color:var(--gold-dark);}
+        .badge-green{background:rgba(58,125,68,0.1);color:var(--green);}
+        h2{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--teal-dark);margin:40px 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(201,168,76,0.2);}
+        h3{font-size:1.05rem;color:var(--gold-dark);margin:20px 0 8px;}
+        p{font-size:0.95rem;color:var(--charcoal-light);margin-bottom:12px;}
+        ul,ol{padding-left:22px;margin-bottom:16px;}
+        li{font-size:0.95rem;color:var(--charcoal-light);margin-bottom:6px;}
+        strong{color:var(--charcoal);}
+        code{background:rgba(10,110,110,0.06);padding:2px 8px;border-radius:4px;font-size:0.88rem;color:var(--teal);font-family:'JetBrains Mono',monospace;}
+        pre{background:var(--blue-night);color:#d4d4d4;padding:18px 22px;border-radius:12px;overflow-x:auto;margin:14px 0 20px;font-size:0.85rem;line-height:1.7;font-family:'JetBrains Mono',monospace;border:1px solid rgba(201,168,76,0.1);}
+        table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:0.9rem;}
+        th{background:rgba(10,110,110,0.06);color:var(--teal-dark);font-weight:600;text-align:left;padding:10px 14px;border-bottom:2px solid rgba(201,168,76,0.2);}
+        td{padding:8px 14px;border-bottom:1px solid rgba(201,168,76,0.08);color:var(--charcoal-light);}
+        tr:hover td{background:rgba(201,168,76,0.03);}
+        .card{background:#fff;border-radius:14px;padding:24px;margin:16px 0;box-shadow:0 4px 20px rgba(0,0,0,0.05);border:1px solid rgba(201,168,76,0.1);}
+        .card h3{margin-top:0;}
+        .note{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(10,110,110,0.04));border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:16px 20px;margin:16px 0;font-size:0.92rem;}
+        .note strong{color:var(--gold-dark);}
+        .diagram{background:var(--blue-night);color:#b0d0b0;padding:20px;border-radius:12px;margin:14px 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem;line-height:1.8;overflow-x:auto;white-space:pre;}
+        blockquote{border-left:3px solid var(--gold);padding:12px 20px;margin:16px 0;background:rgba(201,168,76,0.04);border-radius:0 8px 8px 0;font-style:italic;color:var(--charcoal-light);}
+        .toc{background:#fff;border-radius:14px;padding:24px 28px;margin:20px 0 40px;box-shadow:0 4px 16px rgba(0,0,0,0.04);border:1px solid rgba(201,168,76,0.1);}
+        .toc h3{margin:0 0 12px;color:var(--teal);}
+        .toc ul{list-style:none;padding:0;}
+        .toc li{margin:4px 0;}
+        .toc a{color:var(--teal);text-decoration:none;font-size:0.92rem;transition:0.3s;}
+        .toc a:hover{color:var(--gold-dark);text-decoration:underline;}
+        .footer{text-align:center;padding:32px 20px;margin-top:50px;border-top:2px solid rgba(201,168,76,0.15);}
+        .footer p{color:var(--charcoal-light);font-size:0.88rem;}
+        .footer a{color:var(--teal);text-decoration:none;}
+        .footer a:hover{text-decoration:underline;}
+        .footer .quote{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-dark);font-size:1rem;margin-bottom:12px;}
+        @media(max-width:768px){
+            .container{padding:24px 16px 60px;}
+            h1{font-size:1.7rem;}
+            h2{font-size:1.2rem;}
+            pre{font-size:0.8rem;padding:14px;}
+            table{font-size:0.82rem;}
+            th,td{padding:6px 8px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="top-bar">
+        <span class="brand">Luminaries of Islam</span>
+        <div>
+            <a href="index.html">▶ Open App</a>
+            <a href="help.html">Help</a>
+            <a href="faq.html">FAQ</a>
+            <a href="CHANGES.html">Changelog</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>
+            <span class="ar-title">أنوار الإسلام — علماء العصر الذهبي</span>
+            Luminaries of Islam <span class="version-badge">v1.3</span>
+        </h1>
+        <p class="subtitle">Interactive Trilingual Educational Web App — Scientists of the Golden Age</p>
+        <div class="badges">
+            <span class="badge badge-teal">HTML5</span>
+            <span class="badge badge-teal">CSS3</span>
+            <span class="badge badge-teal">Vanilla JS</span>
+            <span class="badge badge-gold">AR / EN / FR</span>
+            <span class="badge badge-gold">TTS</span>
+            <span class="badge badge-gold">STT</span>
+            <span class="badge badge-green">Privacy-First</span>
+            <span class="badge badge-green">Offline-Ready</span>
+            <span class="badge badge-green">MIT License</span>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>📑 Table of Contents</h3>
+            <ul>
+                <li><a href="#about">📖 About</a></li>
+                <li><a href="#install">🚀 Installation — Step by Step</a></li>
+                <li><a href="#structure">📁 Project Structure</a></li>
+                <li><a href="#features">🎯 Features</a></li>
+                <li><a href="#scientists">👨‍🔬 Scientists Featured</a></li>
+                <li><a href="#howto">🛠️ How-To Guide</a></li>
+                <li><a href="#architecture">🏗️ Architecture</a></li>
+                <li><a href="#privacy">🔒 Privacy & Security</a></li>
+                <li><a href="#browser">📋 Browser Compatibility</a></li>
+                <li><a href="#versioning">📝 Versioning</a></li>
+                <li><a href="#cultural">🤲 Cultural & Ethical Notes</a></li>
+                <li><a href="#license">⚖️ License</a></li>
+                <li><a href="#credits">🤝 Credits</a></li>
+            </ul>
+        </div>
+
+        <!-- ABOUT -->
+        <h2 id="about">📖 About</h2>
+        <p><strong>Luminaries of Islam</strong> is a fully offline, privacy-first, interactive web app that teaches children and young learners about <strong>12 groundbreaking Muslim scientists</strong> from the Islamic Golden Age (8th–14th century CE).</p>
+        <ul>
+            <li><strong>Islamic geometric design</strong> — non-figurative, calligraphy-inspired UI</li>
+            <li><strong>Trilingual</strong> — Arabic (with full RTL), English, French</li>
+            <li><strong>Three knowledge levels</strong> — Newb, Explorer, Developer</li>
+            <li><strong>Voice interaction</strong> — Speech-to-Text search + Text-to-Speech read-aloud</li>
+            <li><strong>Gamified quizzes</strong> — badges, instant feedback, reflection prompts</li>
+            <li><strong>Zero dependencies</strong> — pure HTML/CSS/JS, no build step, no server</li>
+        </ul>
+
+        <!-- INSTALL -->
+        <h2 id="install">🚀 Installation — Step by Step</h2>
+
+        <div class="card">
+            <h3>Option A: Direct Download (Simplest)</h3>
+            <ol>
+                <li><strong>Download</strong> the ZIP file: <code>luminaries-of-islam-v1.3.zip</code></li>
+                <li><strong>Extract</strong> the ZIP to any folder on your computer</li>
+                <li><strong>Open</strong> <code>index.html</code> in your web browser (double-click it)</li>
+                <li><strong>Done!</strong> No server, no terminal, nothing to install</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>Option B: Clone from Git</h3>
+<pre>
+# Step 1: Clone the repository
+git clone https://github.com/YOUR-USERNAME/luminaries-of-islam.git
+
+# Step 2: Enter the project folder
+cd luminaries-of-islam
+
+# Step 3: Open in your browser
+open index.html          # macOS
+xdg-open index.html      # Linux
+start index.html         # Windows
+</pre>
+        </div>
+
+        <div class="card">
+            <h3>Option C: Local Server (Optional)</h3>
+<pre>
+# Python 3:
+python3 -m http.server 8000
+# Open → http://localhost:8000
+
+# Or Node.js:
+npx serve .
+# Open → URL shown in terminal
+</pre>
+        </div>
+
+        <div class="card">
+            <h3>Requirements</h3>
+            <table>
+                <tr><th>Requirement</th><th>Details</th></tr>
+                <tr><td>Browser</td><td>Chrome 80+, Edge 80+, Firefox 85+, or Safari 14+</td></tr>
+                <tr><td>Server</td><td>❌ Not required — works from filesystem</td></tr>
+                <tr><td>Internet</td><td>Only for Google Fonts on first load (graceful offline fallback)</td></tr>
+                <tr><td>Node.js</td><td>❌ Not required</td></tr>
+                <tr><td>Build step</td><td>❌ None — pure HTML/CSS/JS</td></tr>
+            </table>
+        </div>
+
+        <!-- STRUCTURE -->
+        <h2 id="structure">📁 Project Structure</h2>
+<pre>
+luminaries-of-islam/
+│
+├── index.html              ← 🏠 Main app entry point
+├── css/
+│   └── style.css           ← 🎨 Styles, Islamic patterns, RTL support
+├── js/
+│   ├── i18n.js             ← 🌍 Translations (AR/EN/FR) + scientist i18n
+│   ├── app.js              ← ⚙️ Main logic, data, quiz engine
+│   ├── tts.js              ← 🔊 Text-to-Speech module
+│   └── stt.js              ← 🎙️ Speech-to-Text module
+├── help.html               ← ❓ Help center
+├── faq.html                ← 💬 FAQ
+├── README.md               ← 📄 Documentation (Markdown)
+├── README.html             ← 📄 Documentation (HTML — this file)
+├── CHANGES.md              ← 📋 Version history (Markdown)
+├── CHANGES.html            ← 📋 Version history (HTML)
+├── LICENSE                 ← ⚖️ MIT License
+└── .gitignore              ← 🚫 Git ignore rules
+</pre>
+
+        <!-- FEATURES -->
+        <h2 id="features">🎯 Features</h2>
+
+        <div class="card">
+            <h3>🌍 Trilingual Interface</h3>
+            <p>Language switcher in the nav bar: <code>عر</code> / <code>EN</code> / <code>FR</code>. All content switches instantly — UI labels, scientist bios, quiz questions, feedback, badges. Arabic activates full RTL layout. Preference saved in localStorage.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Three Knowledge Levels</h3>
+            <table>
+                <tr><th>Level</th><th>Icon</th><th>Style</th></tr>
+                <tr><td>Newb</td><td>🟢</td><td>Fun analogies, simple language</td></tr>
+                <tr><td>Explorer</td><td>🔵</td><td>Technical vocabulary, historical context</td></tr>
+                <tr><td>Developer</td><td>🟣</td><td>Deep analysis, precise data, academic detail</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>🔊 Text-to-Speech (TTS)</h3>
+            <ul>
+                <li>🔊 button on cards, modals, timeline, quiz, welcome</li>
+                <li>Floating control bar: Play/Pause, Stop, Speed (🐢 0.7x / 🚶 1x / 🐇 1.4x)</li>
+                <li>Browser-native <code>SpeechSynthesis</code> API — no external data transfer</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🎙️ Speech-to-Text (STT)</h3>
+            <ul>
+                <li>🎤 on home search bar — say a scientist's name</li>
+                <li>🎤 in quiz — say your answer aloud</li>
+                <li>Browser-native <code>SpeechRecognition</code> API — no voice data stored</li>
+                <li>Graceful fallback: mic buttons hidden if browser doesn't support it</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Quiz / Challenge Zone</h3>
+            <ul>
+                <li>12 questions, 8 randomly selected per session</li>
+                <li>Trilingual questions, options, and feedback</li>
+                <li>Badges: 🌱 Young Scholar → 📚 Knowledge Seeker → 🌟 Golden Age Expert</li>
+                <li>End-of-quiz reflection prompts</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>📅 Interactive Timeline</h3>
+            <p>Horizontal scroll from 8th to 14th century. Click any scientist dot to open their profile. TTS on each point.</p>
+        </div>
+
+        <!-- SCIENTISTS -->
+        <h2 id="scientists">👨‍🔬 Scientists Featured</h2>
+        <table>
+            <tr><th>#</th><th>Name</th><th>العربية</th><th>Field</th><th>Century</th></tr>
+            <tr><td>1</td><td>Al-Khwarizmi</td><td>الخوارزمي</td><td>Mathematics & Algebra</td><td>9th</td></tr>
+            <tr><td>2</td><td>Ibn al-Haytham</td><td>ابن الهيثم</td><td>Optics & Scientific Method</td><td>10th–11th</td></tr>
+            <tr><td>3</td><td>Ibn Sina (Avicenna)</td><td>ابن سينا</td><td>Medicine & Philosophy</td><td>10th–11th</td></tr>
+            <tr><td>4</td><td>Al-Razi (Rhazes)</td><td>الرازي</td><td>Medicine & Chemistry</td><td>9th–10th</td></tr>
+            <tr><td>5</td><td>Al-Biruni</td><td>البيروني</td><td>Astronomy & Geography</td><td>10th–11th</td></tr>
+            <tr><td>6</td><td>Jabir ibn Hayyan</td><td>جابر بن حيان</td><td>Chemistry</td><td>8th</td></tr>
+            <tr><td>7</td><td>Al-Zahrawi</td><td>الزهراوي</td><td>Surgery</td><td>10th</td></tr>
+            <tr><td>8</td><td>Al-Idrisi</td><td>الإدريسي</td><td>Geography & Cartography</td><td>12th</td></tr>
+            <tr><td>9</td><td>Ibn Khaldun</td><td>ابن خلدون</td><td>Sociology & History</td><td>14th</td></tr>
+            <tr><td>10</td><td>Al-Jazari</td><td>الجزري</td><td>Engineering & Robotics</td><td>12th–13th</td></tr>
+            <tr><td>11</td><td>Omar Khayyam</td><td>عمر الخيام</td><td>Mathematics & Astronomy</td><td>11th–12th</td></tr>
+            <tr><td>12</td><td>Fatima al-Fihri</td><td>فاطمة الفهرية</td><td>Education</td><td>9th</td></tr>
+        </table>
+
+        <!-- HOWTO -->
+        <h2 id="howto">🛠️ How-To Guide</h2>
+
+        <div class="card">
+            <h3>How to Use the App</h3>
+            <ol>
+                <li>Open <code>index.html</code> in your browser</li>
+                <li>Choose language: <code>عر</code> (Arabic), <code>EN</code> (English), or <code>FR</code> (French)</li>
+                <li>Choose level: 🟢 Newb, 🔵 Explorer, or 🟣 Developer</li>
+                <li>Browse scientists — filter by field or scroll the grid</li>
+                <li>Click any card to read the full profile</li>
+                <li>Try voice search: click 🎤 and say a scientist's name</li>
+                <li>Click 🔊 to hear content read aloud</li>
+                <li>Explore the Timeline to see scientists across centuries</li>
+                <li>Take the Quiz in the Challenge Zone</li>
+                <li>Earn the 🌟 Golden Age Expert badge!</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>How to Add a New Scientist</h3>
+            <ol>
+                <li>Open <code>js/app.js</code> — add to the <code>scientists</code> array</li>
+                <li>Open <code>js/i18n.js</code> — add translations to <code>scientistI18n</code></li>
+                <li>Add quiz questions to <code>quizI18n</code> array in <code>js/i18n.js</code></li>
+                <li>Add filter button in <code>index.html</code> if new field category</li>
+                <li>Increment version, update <code>CHANGES.md</code></li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>How to Add a New Language</h3>
+            <ol>
+                <li>Open <code>js/i18n.js</code></li>
+                <li>Add a new key to every translation object (e.g., <code>es</code> for Spanish)</li>
+                <li>Add a language button to the switcher in <code>index.html</code></li>
+                <li>Add scientist + quiz translations for the new language</li>
+                <li>For RTL languages, add the code to the RTL check in <code>i18n.js</code></li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>How to Change Colors</h3>
+            <p>Edit CSS variables at the top of <code>css/style.css</code>:</p>
+<pre>
+:root {
+    --teal: #0A6E6E;      /* Primary */
+    --gold: #C9A84C;       /* Accent */
+    --cream: #FDF6EC;      /* Background */
+    --charcoal: #2C2C2C;   /* Text */
+}
+</pre>
+        </div>
+
+        <!-- ARCHITECTURE -->
+        <h2 id="architecture">🏗️ Architecture</h2>
+<div class="diagram">┌─────────────────────────────────────────────┐
+│                 index.html                   │
+│  (structure, layout, semantic HTML)          │
+├─────────────────────────────────────────────┤
+│             css/style.css                    │
+│  (design, animations, RTL, responsive)       │
+├─────────────┬──────────┬──────────┬─────────┤
+│  js/i18n.js │ js/app.js│ js/tts.js│js/stt.js│
+│  (language) │ (logic)  │ (speech) │ (voice) │
+└─────────────┴──────────┴──────────┴─────────┘</div>
+
+        <div class="note">
+            <strong>Key design decisions:</strong> No framework (max simplicity), separate i18n module (clean content/logic split), browser Speech APIs (privacy-first), CSS-only patterns (no image assets), localStorage only (no cookies, no server), emoji icons (universal, no assets).
+        </div>
+
+        <!-- PRIVACY -->
+        <h2 id="privacy">🔒 Privacy & Security</h2>
+        <table>
+            <tr><th>Concern</th><th>Status</th></tr>
+            <tr><td>Data collection</td><td>❌ None — zero telemetry</td></tr>
+            <tr><td>Cookies</td><td>❌ None — only localStorage for preferences</td></tr>
+            <tr><td>Analytics / tracking</td><td>❌ None</td></tr>
+            <tr><td>External API calls</td><td>❌ None (except Google Fonts CSS)</td></tr>
+            <tr><td>Voice recording</td><td>❌ Never stored — browser-local only</td></tr>
+            <tr><td>Offline support</td><td>✅ Full (fonts fallback gracefully)</td></tr>
+        </table>
+        <p><strong>localStorage keys:</strong> <code>app_lang</code> (ar/en/fr), <code>learn_level</code> (newb/explorer/developer), <code>tts_speed</code> (0.7/1/1.4)</p>
+
+        <!-- BROWSER -->
+        <h2 id="browser">📋 Browser Compatibility</h2>
+        <table>
+            <tr><th>Browser</th><th>Layout</th><th>TTS</th><th>STT</th><th>Notes</th></tr>
+            <tr><td>Chrome 80+</td><td>✅</td><td>✅</td><td>✅</td><td>Recommended</td></tr>
+            <tr><td>Edge 80+</td><td>✅</td><td>✅</td><td>✅</td><td>Full support</td></tr>
+            <tr><td>Safari 14+</td><td>✅</td><td>✅</td><td>⚠️</td><td>STT limited on iOS</td></tr>
+            <tr><td>Firefox 85+</td><td>✅</td><td>✅</td><td>❌</td><td>No STT (mic hidden)</td></tr>
+            <tr><td>Mobile Chrome</td><td>✅</td><td>✅</td><td>✅</td><td>Responsive</td></tr>
+        </table>
+
+        <!-- VERSIONING -->
+        <h2 id="versioning">📝 Versioning</h2>
+        <p>Format: <code>vMAJOR.MINOR</code>. After every change: increment version, update footer in <code>index.html</code>, update <code>CHANGES.md</code> and <code>CHANGES.html</code>. ZIP name: <code>luminaries-of-islam-v{VERSION}.zip</code></p>
+
+        <!-- CULTURAL -->
+        <h2 id="cultural">🤲 Cultural & Ethical Notes</h2>
+        <ul>
+            <li><strong>Bismillah header</strong> — always present; Islamic invocation before seeking knowledge</li>
+            <li><strong>Non-figurative design</strong> — respects Islamic artistic tradition</li>
+            <li><strong>Clean humor</strong> — geeky, intelligent, never vulgar or violent</li>
+            <li><strong>Inclusive</strong> — features both male and female scholars</li>
+            <li><strong>No occult/magic themes</strong> — historically and scientifically grounded</li>
+            <li><strong>Privacy-first</strong> — no data leaves the user's device</li>
+        </ul>
+
+        <!-- LICENSE -->
+        <h2 id="license">⚖️ License</h2>
+        <p>MIT License — free for educational, personal, and commercial use. See <a href="LICENSE">LICENSE</a> file.</p>
+
+        <!-- CREDITS -->
+        <h2 id="credits">🤝 Credits</h2>
+        <p>Built with ❤️ and deep respect for the scholars who advanced human knowledge.</p>
+
+        <blockquote>
+            "اطلبوا العلم من المهد إلى اللحد"<br>
+            "Seek knowledge from the cradle to the grave."<br>
+            "Cherchez le savoir du berceau au tombeau."
+        </blockquote>
+
+        <div class="footer">
+            <p class="quote">"Seek knowledge from the cradle to the grave."</p>
+            <p><strong>Luminaries of Islam v1.3</strong></p>
+            <p><a href="index.html">Open App</a> · <a href="help.html">Help</a> · <a href="faq.html">FAQ</a> · <a href="CHANGES.html">Changelog</a></p>
+        </div>
+    </div>
+</body>
+</html>

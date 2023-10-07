@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaries of Islam — Scientists of the Golden Age</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══════════ BISMILLAH HEADER ═══════════ -->
+    <div class="bismillah-header" aria-label="In the name of Allah, the Most Gracious, the Most Merciful">
+        <div class="bismillah-ornament-left"></div>
+        <span class="bismillah-text">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span>
+        <div class="bismillah-ornament-right"></div>
+    </div>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-inner">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <svg viewBox="0 0 40 40" class="nav-logo-svg">
+                        <polygon points="20,2 25,15 38,15 27,23 31,37 20,29 9,37 13,23 2,15 15,15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="20" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                </div>
+                <span class="nav-title">Luminaries of Islam</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#scientists" class="nav-link" data-section="scientists">Scientists</a></li>
+                <li><a href="#timeline" class="nav-link" data-section="timeline">Timeline</a></li>
+                <li><a href="#challenges" class="nav-link" data-section="challenges">Challenges</a></li>
+                <li><a href="help.html" class="nav-link">Help</a></li>
+            </ul>
+            <div class="nav-controls">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn" data-lang="ar" title="العربية">عر</button>
+                    <button class="lang-btn active" data-lang="en" title="English">EN</button>
+                    <button class="lang-btn" data-lang="fr" title="Français">FR</button>
+                </div>
+                <div class="level-switcher" id="levelSwitcher">
+                    <button class="level-btn active" data-level="newb" title="Simple explanations">🟢 Newb</button>
+                    <button class="level-btn" data-level="explorer" title="Technical details">🔵 Explorer</button>
+                    <button class="level-btn" data-level="developer" title="Advanced depth">🟣 Developer</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════ HERO SECTION ═══════════ -->
+    <section class="hero-section" id="hero">
+        <div class="hero-geometric-bg">
+            <div class="geo-pattern geo-1"></div>
+            <div class="geo-pattern geo-2"></div>
+            <div class="geo-pattern geo-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-star">
+                <svg viewBox="0 0 120 120" class="hero-star-svg">
+                    <polygon points="60,5 72,42 110,42 80,65 90,102 60,80 30,102 40,65 10,42 48,42" fill="none" stroke="var(--gold)" stroke-width="1.2" opacity="0.6"/>
+                    <polygon points="60,20 68,45 95,45 74,60 82,85 60,70 38,85 46,60 25,45 52,45" fill="none" stroke="var(--gold)" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-ar">عُلَمَاءُ الإِسْلَام</span>
+                <span class="hero-title-en">Scientists of the Golden Age</span>
+            </h1>
+            <p class="hero-subtitle">Centuries before modern science, Muslim scholars illuminated the world with knowledge, discovery, and wisdom.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="btnStartExploring" onclick="scrollToSection('scientists')">
+                    <span>Start Exploring</span>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn btn-secondary" id="btnWelcomeTTS" title="Listen to welcome message">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    <span>Listen</span>
+                </button>
+            </div>
+            <div class="hero-stt-bar">
+                <button class="stt-mic-btn" id="heroMicBtn" title="Search by voice">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="1" width="6" height="11" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    <div class="mic-pulse"></div>
+                </button>
+                <input type="text" class="stt-search-input" id="heroSearchInput" placeholder="Search scientists or say a name..." autocomplete="off">
+                <div class="stt-status" id="heroSttStatus"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SCIENTISTS GALLERY ═══════════ -->
+    <section class="section scientists-section" id="scientists">
+        <div class="section-header">
+            <div class="section-ornament"></div>
+            <h2 class="section-title">The Great Scholars</h2>
+            <p class="section-subtitle">Tap a card to discover their story</p>
+        </div>
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-btn active" data-field="all">All</button>
+            <button class="filter-btn" data-field="mathematics">Mathematics</button>
+            <button class="filter-btn" data-field="medicine">Medicine</button>
+            <button class="filter-btn" data-field="astronomy">Astronomy</button>
+            <button class="filter-btn" data-field="chemistry">Chemistry</button>
+            <button class="filter-btn" data-field="engineering">Engineering</button>
+            <button class="filter-btn" data-field="geography">Geography</button>
+            <button class="filter-btn" data-field="education">Education</button>
+            <button class="filter-btn" data-field="sociology">Sociology</button>
+        </div>
+        <div class="scientists-grid" id="scientistsGrid">
+            <!-- Cards injected by JS -->
+        </div>
+    </section>
+
+    <!-- ═══════════ SCIENTIST DETAIL MODAL ═══════════ -->
+    <div class="modal-overlay" id="scientistModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"></div>
+                <div class="modal-title-group">
+                    <h2 class="modal-name" id="modalName"></h2>
+                    <h3 class="modal-name-ar" id="modalNameAr"></h3>
+                    <span class="modal-field" id="modalField"></span>
+                    <span class="modal-era" id="modalEra"></span>
+                </div>
+                <button class="tts-btn modal-tts-btn" id="modalTtsBtn" title="Read aloud">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </button>
+            </div>
+            <div class="modal-level-tabs">
+                <button class="modal-level-tab active" data-modal-level="newb">🟢 Newb</button>
+                <button class="modal-level-tab" data-modal-level="explorer">🔵 Explorer</button>
+                <button class="modal-level-tab" data-modal-level="developer">🟣 Developer</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="modal-bio" id="modalBio"></div>
+                <div class="modal-contributions">
+                    <h4>Key Contributions</h4>
+                    <ul id="modalContributions"></ul>
+                </div>
+                <div class="modal-funfact" id="modalFunFact">
+                    <div class="funfact-icon">💡</div>
+                    <div class="funfact-content">
+                        <strong>Did You Know?</strong>
+                        <p id="modalFunFactText"></p>
+                    </div>
+                    <button class="tts-btn funfact-tts" id="funfactTtsBtn" title="Read fun fact">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    </button>
+                </div>
+                <div class="modal-legacy">
+                    <h4>Legacy in Modern Science</h4>
+                    <p id="modalLegacy"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TIMELINE ═══════════ -->
+    <section class="section timeline-section" id="timeline">
+        <div class="section-header">
+            <div class="section-ornament"></div>
+            <h2 class="section-title">Timeline of Discovery</h2>
+            <p class="section-subtitle">Scroll through centuries of brilliance</p>
+        </div>
+        <div class="timeline-container" id="timelineContainer">
+            <div class="timeline-track" id="timelineTrack">
+                <!-- Timeline items injected by JS -->
+            </div>
+        </div>
+        <div class="timeline-nav">
+            <button class="timeline-nav-btn" id="timelinePrev" aria-label="Previous">◀</button>
+            <span class="timeline-century-label" id="timelineCenturyLabel">8th Century</span>
+            <button class="timeline-nav-btn" id="timelineNext" aria-label="Next">▶</button>
+        </div>
+    </section>
+
+    <!-- ═══════════ CHALLENGE ZONE ═══════════ -->
+    <section class="section challenges-section" id="challenges">
+        <div class="section-header">
+            <div class="section-ornament"></div>
+            <h2 class="section-title">Challenge Zone</h2>
+            <p class="section-subtitle">Test your knowledge — earn your badges!</p>
+        </div>
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-score-bar">
+                <div class="quiz-score">
+                    <span>Score: </span><strong id="quizScore">0</strong> / <span id="quizTotal">0</span>
+                </div>
+                <div class="quiz-badge" id="quizBadge">🌱 Young Scholar</div>
+            </div>
+            <div class="quiz-card" id="quizCard">
+                <div class="quiz-question-header">
+                    <span class="quiz-number" id="quizNumber">Question 1</span>
+                    <button class="tts-btn quiz-tts-btn" id="quizTtsBtn" title="Read question aloud">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    </button>
+                </div>
+                <p class="quiz-question" id="quizQuestion"></p>
+                <div class="quiz-options" id="quizOptions">
+                    <!-- Options injected by JS -->
+                </div>
+                <div class="quiz-feedback" id="quizFeedback"></div>
+                <div class="quiz-actions">
+                    <button class="btn btn-primary quiz-next-btn" id="quizNextBtn" style="display:none">Next Question →</button>
+                    <button class="stt-mic-btn quiz-mic-btn" id="quizMicBtn" title="Answer with voice">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="1" width="6" height="11" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        <div class="mic-pulse"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="quiz-reflection" id="quizReflection" style="display:none">
+                <div class="reflection-icon">🌟</div>
+                <h3 id="reflectionTitle"></h3>
+                <p id="reflectionText"></p>
+                <button class="btn btn-primary" id="quizRestartBtn">Try Again</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TTS CONTROL BAR ═══════════ -->
+    <div class="tts-control-bar" id="ttsControlBar">
+        <button class="tts-ctrl-btn" id="ttsPlayPause" title="Play/Pause">
+            <svg id="ttsPlayIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            <svg id="ttsPauseIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+        </button>
+        <button class="tts-ctrl-btn" id="ttsStop" title="Stop">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+        </button>
+        <div class="tts-speed-control">
+            <button class="tts-speed-btn" data-speed="0.7" title="Slow">🐢</button>
+            <button class="tts-speed-btn active" data-speed="1" title="Normal">🚶</button>
+            <button class="tts-speed-btn" data-speed="1.4" title="Fast">🐇</button>
+        </div>
+        <div class="tts-progress" id="ttsProgress">
+            <span id="ttsCurrentText" class="tts-current-text">Ready</span>
+        </div>
+    </div>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="main-footer">
+        <div class="footer-pattern"></div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="help.html">Help</a>
+                <a href="faq.html">FAQ</a>
+                <a href="README.html">README</a>
+                <a href="CHANGES.html">Changelog</a>
+            </div>
+            <p class="footer-quote">"Seek knowledge from the cradle to the grave."</p>
+            <p class="footer-credit">Built with ❤️ and respect for knowledge</p>
+            <p class="footer-version">Luminaries of Islam — v1.3</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/tts.js"></script>
+    <script src="js/stt.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
